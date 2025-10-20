@@ -1,0 +1,21 @@
+# Exported from Render on 2025-10-20T20:04:48Z
+version: "1"
+services:
+- type: worker
+  name: Telegram-Bot
+  runtime: python
+  repo: https://github.com/lakshayj11/Telegram-Bot
+  plan: starter
+  envVars:
+  - key: OPENAI_API_KEY
+    sync: false
+  - key: CREATE_DB_ON_START
+    sync: false
+  - key: DATABASE_URL
+    sync: false
+  - key: TELEGRAM_BOT_TOKEN
+    sync: false
+  region: frankfurt
+  buildCommand: pip install -r requirements.txt
+  startCommand: python main.py
+  autoDeployTrigger: commit
