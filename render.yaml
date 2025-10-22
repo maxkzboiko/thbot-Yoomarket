@@ -4,7 +4,7 @@ services:
 - type: worker
   name: Telegram-Bot
   runtime: python
-  repo: https://github.com/lakshayj11/Telegram-Bot
+  repo: https://github.com/maxkzboiko/yoomarket-rep
   plan: starter
   envVars:
   - key: OPENAI_API_KEY
