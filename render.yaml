@@ -8,13 +8,13 @@ services:
   plan: starter
   envVars:
   - key: OPENAI_API_KEY
-    sync: true
+    sync: false
   - key: CREATE_DB_ON_START
-    sync: true
+    sync: false
   - key: DATABASE_URL
-    sync: true
+    sync: false
   - key: TELEGRAM_BOT_TOKEN
-    sync: true
+    sync: false
   region: frankfurt
   buildCommand: pip install -r requirements.txt
   startCommand: python main.py
